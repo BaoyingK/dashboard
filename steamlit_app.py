@@ -43,7 +43,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     # height=300
     return heatmap
 
-Choropleth map of the US population for a selected year of interest (2019 in this case).
+
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
     choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="USA-states",
                                color_continuous_scale=input_color_theme,
