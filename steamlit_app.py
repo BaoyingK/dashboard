@@ -65,7 +65,7 @@ def calculate_population_difference(input_df, input_year):
   previous_year_data = input_df[input_df['year'] == input_year - 1].reset_index()
   selected_year_data['population_difference'] = selected_year_data.population.sub(previous_year_data.population, fill_value=0)
   return pd.concat([selected_year_data.states, selected_year_data.id, selected_year_data.population, selected_year_data.population_difference], axis=1).sort_values(by="population_difference", ascending=False)
-The donut chart is then created from the aforementioned percentage value for states migration.
+
 
 def make_donut(input_response, input_text, input_color):
   if input_color == 'blue':
